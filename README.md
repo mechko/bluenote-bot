@@ -8,4 +8,4 @@ https://www.jazzdepartment.com/
 
 Place MASTODON_ACCESS_TOKEN in a .env file, install dependencies via pipenv, and then run
 
-```pipenv run python bluenote-robot.py````
+```pipenv run python bluenote-robot.py```
