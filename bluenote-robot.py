@@ -34,13 +34,13 @@ try:
 except:
     pass
 
-if not status:
-    status = "Heute konnte ich keine Veranstaltung im Bluenote-Kalender finden. Überzeuge Dich am besten hier nochmal selbst: https://www.jazzdepartment.com/"
+if status:
+    mastodon = Mastodon(
+        access_token=mastodon_access_token,
+        api_base_url=mastodon_url
+    )
 
-mastodon = Mastodon(
-    access_token=mastodon_access_token,
-    api_base_url=mastodon_url
-)
-
-print(status)
-mastodon.status_post(status + " #dresden #neustadt #jazz #music")
+    print(status)
+    mastodon.status_post(status + " #dresden #neustadt #jazz #music")
+else:
+    print("No events found for today.")
