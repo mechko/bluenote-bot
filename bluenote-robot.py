@@ -44,7 +44,7 @@ for status in statuses:
     created_date = status.created_at.date()
     print("Checking status from " + str(created_date))
     if created_date == today:
-        print("Boosting status with id " + status.id)
+        print("Boosting status with id " + str(status.id))
         mastodon.status_reblog(status.id)
         mode_boost_only = True
 
