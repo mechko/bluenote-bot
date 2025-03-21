@@ -15,7 +15,7 @@ from datetime import datetime
 
 load_dotenv()
 
-bluenote_ics = "https://www.jazzdepartment.com/web/bluenoteics.ics"
+bluenote_ics = "https://www.bluenote-dresden.de/bluenoteics.ics"
 mastodon_access_token = os.getenv('MASTODON_ACCESS_TOKEN')
 mastodon_account_id = os.getenv('MASTODON_ACCOUNT_ID')
 mastodon_url = "https://dresden.network"
