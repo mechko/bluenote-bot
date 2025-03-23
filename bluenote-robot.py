@@ -54,7 +54,9 @@ if not mode_boost_only:
     status = ""
 
     try:
-        ics_content = requests.get(bluenote_ics).text
+        ics = requests.get(bluenote_ics)
+        ics_content = ics.content.decode("UTF-8")
+
         c = Calendar(ics_content)
         for e in c.timeline.today():    
             status += "Heute um " + e.begin.to('local').format("HH") + " Uhr im Blue Note: "
